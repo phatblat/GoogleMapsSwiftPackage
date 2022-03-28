@@ -14,7 +14,10 @@ DESC
   s.changelog        = 'https://developers.google.com/maps/documentation/ios-sdk/releases'
   s.license          = { type: 'Copyright', text: 'Copyright 2022 Google' }
   s.authors          = 'Google, Inc.'
-  s.source           = { http: 'https://github.com/phatblat/GoogleMapsSwiftPackage/releases/download/6.1.1/GoogleMaps-6.1.1-beta.xcframework.zip' }
+  s.source           = {
+    http: 'https://github.com/phatblat/GoogleMapsSwiftPackage/releases/download/6.1.1/GoogleMaps-6.1.1-beta.xcframework.zip',
+    sha256: '01b0817688c1f0e752c307348199a1b01542201d0e4905d85b340c7468fd08d1'
+  }
 
   s.ios.deployment_target = '12.0'
 
