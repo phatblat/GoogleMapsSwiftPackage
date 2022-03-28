@@ -1,4 +1,4 @@
-# Google Maps SDK for iOS
+# 🗺 Google Maps SDK for iOS
 
 Swift package for the beta version of the Google Maps SDK which includes an [XCFramework].
 This package is temporary and will likely be abandoned after the new XCFramework
