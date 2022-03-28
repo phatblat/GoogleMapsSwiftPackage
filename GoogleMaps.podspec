@@ -9,33 +9,33 @@ immersive Street View panoramas, and detailed information from Google's Places
 database.
 DESC
 
-  s.homepage         = 'https://github.com/phatblat/temp'
+  s.homepage         = 'https://developers.google.com/maps/documentation/ios-sdk'
   s.readme           = 'https://dl.google.com/dl/cpdc/e028d849b9a6561a/GoogleMaps-6.1.1-README.md'
-  s.changelog        = 'https://dl.google.com/dl/cpdc/e028d849b9a6561a/GoogleMaps-6.1.1-CHANGELOG.md'
+  s.changelog        = 'https://developers.google.com/maps/documentation/ios-sdk/releases'
   s.license          = { type: 'Copyright', text: 'Copyright 2022 Google' }
   s.authors          = 'Google, Inc.'
-  s.source           = { http: 'https://dl.google.com/dl/cpdc/e028d849b9a6561a/GoogleMaps-6.1.1.tar.gz' }
+  s.source           = { http: 'https://github.com/phatblat/GoogleMapsSwiftPackage/releases/download/6.1.1/GoogleMaps-6.1.1-beta.xcframework.zip' }
 
   s.ios.deployment_target = '12.0'
 
-  s.preserve_paths = 'Example/**/*', 'SwiftExample/**/*', 'CHANGELOG.md', 'README.mod'
+  # s.preserve_paths = 'Example/**/*', 'SwiftExample/**/*', 'CHANGELOG.md', 'README.md'
 
   s.default_subspecs  = 'Maps'
 
   s.subspec 'Base' do |ss|
-    ss.vendored_frameworks = 'Base/Frameworks/GoogleMapsBase.framework'
+    ss.vendored_frameworks = 'GoogleMapsBase.xcframework'
     ss.frameworks = 'CoreData', 'CoreGraphics', 'CoreLocation', 'CoreTelephony', 'QuartzCore', 'SystemConfiguration', 'UIKit'
     ss.libraries = 'c++', 'z'
   end
 
   s.subspec 'Maps' do |ss|
     ss.dependencies = 'Base'
-    ss.vendored_frameworks = 'Base/Frameworks/GoogleMaps.framework', 'Base/Frameworks/GoogleMapsCore.framework'
-    ss.resources = 'Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle'
+    ss.vendored_frameworks = 'GoogleMaps.xcframework', 'GoogleMapsCore.xcframework'
+    ss.resources = 'GoogleMaps.xcframework/Resources/GoogleMaps.bundle'
     ss.frameworks = 'Accelerate', 'CoreImage', 'CoreText', 'GLKit', 'ImageIO', 'Metal', 'OpenGLES', 'QuartzCore'
   end
 
   s.subspec 'M4B' do |ss|
-    ss.vendored_frameworks = 'M4B/Frameworks/GoogleMapsM4B.framework'
+    ss.vendored_frameworks = 'GoogleMapsM4B.xcframework'
   end
 end
