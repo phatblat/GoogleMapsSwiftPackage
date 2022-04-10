@@ -6,6 +6,10 @@ is available via [CocoaPods](https://cocoapods.org/pods/GoogleMaps).
 
 [xcframework]: https://developers.google.com/maps/documentation/ios-sdk/config#install-the-xcframework
 
+## ⏲ Temporary
+
+This repo is temporary until googlemaps/google-maps-ios-utils#355 is available via CocoaPods (so that it can be used by Flutter apps).
+
 ## 📄 License
 
 This repo is licensed under the MIT License. See the [LICENSE](LICENSE.md) file for rights and limitations.
